@@ -128,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='EXAM.html'>EXAM</a><ul class='dropdown'><li><a href='w13.html'>w13</a></li></ul><li><a href='HW1.html'>HW1</a><li class='has-children'><a href='HW2.html'>HW2</a><ul class='dropdown'><li><a href='run.html'>run</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='snake.html'>snake</a></li></ul><li class='has-children'><a href='Final Project.html'>Final Project</a><ul class='dropdown'><li><a href='41023126.html'>41023126</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='EXAM.html'>EXAM</a><ul class='dropdown'><li><a href='w13.html'>w13</a></li></ul><li><a href='HW1.html'>HW1</a><li class='has-children'><a href='HW2.html'>HW2</a><ul class='dropdown'><li><a href='run.html'>run</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='snake.html'>snake</a></li></ul><li class='has-children'><a href='Final Project.html'>Final Project</a><ul class='dropdown'><li><a href='41023126.html'>41023126</a></li></ul><li><a href='期末考試.html'>期末考試</a></li>
                       </ul>
                 </nav>
               </div>
@@ -139,7 +139,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Final Project << <a href='Final Project.html'>Previous</a> <br /><h1>41023126</h1>
+    <div id="tipue_search_content">Final Project << <a href='Final Project.html'>Previous</a> <a href='期末考試.html'>Next</a> >> 期末考試<br /><h1>41023126</h1>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -183,13 +183,14 @@ def clear_bd(ev):
 # Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
 Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
 # 從 gist 取出程式碼後, 放入 editor 作為 default 程式
-def run()
+def run():
     # 利用 get 取下 src 變數值
     try:
         url = doc.query["src"]
     except:
         url = "https://gist.github.com/41023126/d488026b5dae3c83752d8cb9752ac3fc "
     prog = open(url).read()
+
     # 將程式載入編輯區
     Ace.editor.setValue(prog)
     Ace.editor.scrollToRow(0)
@@ -199,14 +200,17 @@ def run()
     #exec(prog, ns)
     # 按下 run 按鈕
     Ace.run()
+
 chec_qwe_url = "https://gist.githubusercontent.com/41023126/6d7cdae2b8bcf87ebc702aa809e729a9/raw/8288d63d8211651f4ff1fef627a0685ba806582d/EXAM"
  # 從 gist 取得程式碼
 chec_wq = open(chec_qwe_url).read()
+
 def chec_inp(ev):
      Ace.editor.setValue(chec_wq)
      Ace.editor.scrollToRow(0)
      Ace.editor.gotoLine(0)
      #Ace.run()
+
 # id 為 "asd" 的按鈕點按時, 執行 chec_inp 方法
 doc["asd"].bind('click', chec_inp)
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
@@ -238,7 +242,7 @@ def final_inp(ev):
      Ace.run()
 # id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
 doc["final"].bind('click', final_inp)
-final3_qwe_url = "https://gist.githubusercontent.com/41023126/abc9ff33278e574f12a01968051e8f56/raw/fb5124685951150447ff7776f42c2716e66cc751/final1"
+final3_qwe_url = "https://gist.githubusercontent.com/41023126/abc9ff33278e574f12a01968051e8f56/raw/e8d9938232782b3469da9075a14cc02aebae9f90/final1"
  # 從 gist 取得程式碼
 final3_wq = open(final3_qwe_url).read()
 
@@ -249,6 +253,17 @@ def final3_inp(ev):
      Ace.run()
 # id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
 doc["final3"].bind('click', final3_inp)
+
+final10_qwe_url = "https://gist.githubusercontent.com/41023126/255c10b90bb7a6795cf8446e2dcf306f/raw/3a3a6d92db6c339a58600d63e2c8ffc234864299/final3"
+ # 從 gist 取得程式碼
+final10_wq = open(final10_qwe_url).read()
+def final10_inp(ev):
+     Ace.editor.setValue(final10_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+# id 為 "final10" 的按鈕點按時, 執行 chec_inp 方法
+doc["final10"].bind('click', final10_inp)
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
@@ -265,13 +280,21 @@ run()
 <p></p>
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="asd">列出10個座標</button> <button id="snake">snake</button> <button id="final">final2</button> <button id="final3">final1</button></p>
+<p><button id="asd">列出10個座標</button><button id="snake">snake</button> <button id="final">final2</button> <button id="final3">final1</button></p>
+<p><button id="final10">final3</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
-<div id="brython_div"></div><br />Final Project << <a href='Final Project.html'>Previous</a> </div>
+<div id="brython_div"></div>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
+</p><br />Final Project << <a href='Final Project.html'>Previous</a> <a href='期末考試.html'>Next</a> >> 期末考試</div>
         
     <!-- footer -->
       <div class="container">
