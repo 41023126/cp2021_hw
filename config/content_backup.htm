@@ -442,19 +442,7 @@ run()
 <!-- 程式執行 ouput 區 -->
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
-<div id="brython_div"></div><h2>其他資料</h2>
-<p>CH1初步學習程式語言</p>
-<p>資料來源:<a href="https://www.learncodewithmike.com/2019/12/python-function.html">https://www.learncodewithmike.com/2019/12/python-function.html</a></p>
-<p>CH2參考資料</p>
-<p>注意:</p>
-<ol>
-<li>不需要在使用 if 做測試時加上括號，必須在<strong><span style="color: #ff0000;"><em>結尾使用冒號（:）</em></span>，</strong>c++語言是後面加(；)</li>
-<li>不要使用 if(disaster == True) 之類</li>
-<li>忘記在結尾輸入冒號，Python 會顯示錯誤訊息</li>
-</ol>
-<p></p>
-<p>資料來源:<a href="https://iampennywu.gitbooks.io/introducing-python/content/url">https://iampennywu.gitbooks.io/introducing-python/content/</a></p>
-<p></p><h1>Final Project</h1>
+<div id="brython_div"></div><h1>Final Project</h1>
 <p>Final Project 佔學期成績 30%</p>
 <p><span style="background-color: #ffff99;">Final Project 必須在 2022.01.05 22:00 之前完成</span>.</p>
 <p><a href="https://github.com/mdecourse/cp2021/discussions/11">Final Project 具體項目成果回報區</a>將於 2021.11.09 開啟, 於 <span style="background-color: #ff99cc;">2022.01.05 22:00 關閉</span></p>
@@ -477,7 +465,9 @@ run()
 <p style="padding-left: 60px;"><a href="https://github.com/mdecourse/brython-blocks">https://github.com/mdecourse/brython-blocks</a></p>
 <h3>41023126</h3>
 <p>1.在Snake和final2~3中都要先設定參數</p>
-<p>2.</p>
+<p>2.利用平面座標(x,y)的觀念，去設定方向</p>
+<p>3.在利用for迴圈和<span> if、elif、else的技巧製作程式</span></p>
+<p></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -557,7 +547,7 @@ doc['kw_show_console'].bind('click', Ace.show_console)
 doc['kw_clear_console'].bind('click', Ace.clear_console)
 doc['clear_bd'].bind('click', clear_bd)
 
-snake_qwe_url = "https://gist.githubusercontent.com/41023126/ad8ea9f783335ad994aa2113cb33f658/raw/fb10b06e19c3fe2477dd9bed195b781acc42cce1/%25E8%2587%25AA%25E5%258B%2595%25E8%25B2%25AA%25E9%25A3%259F%25E8%259B%2587"
+snake_qwe_url = "https://gist.githubusercontent.com/41023126/ad8ea9f783335ad994aa2113cb33f658/raw/63e98ad4b61242898ba85ae7d1fc15b5cbc39056/%25E8%2587%25AA%25E5%258B%2595%25E8%25B2%25AA%25E9%25A3%259F%25E8%259B%2587"
  # 從 gist 取得程式碼
 snake_wq = open(snake_qwe_url).read()
 
@@ -592,7 +582,7 @@ def final3_inp(ev):
 # id 為 "final3" 的按鈕點按時, 執行 chec_inp 方法
 doc["final3"].bind('click', final3_inp)
 
-final10_qwe_url = "https://gist.githubusercontent.com/41023126/255c10b90bb7a6795cf8446e2dcf306f/raw/6717aff614b4f024240c87400a660fd8f5590f0a/final3"
+final10_qwe_url = "https://gist.githubusercontent.com/41023126/255c10b90bb7a6795cf8446e2dcf306f/raw/9ef05151a12e3815202574ca0bcdbe63b85cf142/final3"
  # 從 gist 取得程式碼
 final10_wq = open(final10_qwe_url).read()
 def final10_inp(ev):
@@ -645,7 +635,21 @@ run()
 <script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
-</p><h1>期末考試</h1>
+</p>
+<p>遇到的錯誤:叫錯函式庫、</p>
+<p>期末心得:我是到大學遇到這個課程，才開始去研究程式語言，在高職的時候只有學自動化才會遇到程式，所以上大學遇到這門課，一開始真的讓我很頭痛，什麼基礎都沒有就要開始寫程式，讓我感覺到我到底在做時麼的感覺，作業都只能吃抄別人的，甚麼都看不懂，而現在看得懂同學們打的程式，但是我要自己打出程式，每次都會卡關，要看著別人的程式才會發現問題出在哪，例如:忘記標(:)、或是參數設錯、<span>搞錯變數的資料類別，叫錯函式等等，我想打了那麼多的程式，對於程式已經有更多的了解，但是還有一個大問題，就是英文不太好，很多的資料都是用英文寫的，對於程式和英文都有很大的學習空間。</span></p><h1>其他資料</h1>
+<p>CH1初步學習程式語言</p>
+<p>資料來源:<a href="https://www.learncodewithmike.com/2019/12/python-function.html">https://www.learncodewithmike.com/2019/12/python-function.html</a></p>
+<p>CH2參考資料</p>
+<p>常見錯誤:</p>
+<ol>
+<li>不需要在使用 if 做測試時加上括號，必須在<strong><span style="color: #ff0000;"><em>結尾使用冒號（:）</em></span>，</strong>c++語言是後面加(；)</li>
+<li>不要使用 if(disaster == True) 之類</li>
+<li>忘記在結尾輸入冒號，Python 會顯示錯誤訊息</li>
+<li><span>一個 (=) 是設定變數裡的值，兩個( == )才是指比對兩邊的值是否一樣</span></li>
+<li><span>搞錯變數的資料類別，叫錯函式</span></li>
+<li>資料來源:<a href="https://iampennywu.gitbooks.io/introducing-python/content/url">https://iampennywu.gitbooks.io/introducing-python/content/</a></li>
+</ol><h1>期末考試</h1>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -711,7 +715,7 @@ doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
 doc['kw_clear_console'].bind('click', Ace.clear_console)
 doc['clear_bd'].bind('click', clear_bd)
-final10_qwe_url = "https://gist.githubusercontent.com/41023126/255c10b90bb7a6795cf8446e2dcf306f/raw/b24bc6882b5e092edd64ba9f78a42422743c15df/final3"
+final10_qwe_url = "https://gist.githubusercontent.com/41023126/255c10b90bb7a6795cf8446e2dcf306f/raw/9ef05151a12e3815202574ca0bcdbe63b85cf142/final3"
  # 從 gist 取得程式碼
 final10_wq = open(final10_qwe_url).read()
 def final10_inp(ev):
